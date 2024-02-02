@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <title>Home - Sandbox 3 Laravel: Sistem Kasir</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.ico">
     <!-- Custom Stylesheet -->
     <link href="/assets/plugins/tables/css/datatable/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="/assets/css/style.css" rel="stylesheet">
@@ -41,12 +41,10 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="index.html">
-                    <b class="logo-abbr"><img src="/assets/images/logo.png" alt=""> </b>
-                    <span class="logo-compact"><img src="/assets/images/logo-compact.png" alt=""></span>
-                    <span class="brand-title">
-                        <img src="/assets/images/logo-text.png" alt="">
-                    </span>
+                <a href="/home">
+                    <b class="logo-abbr"><img src="/assets/images/logomark.min.svg" alt=""> </b>
+                    <!-- <span class="logo-compact"><img src="/assets/images/logotype.min.svg" alt=""></span> -->
+                    <span class="brand-title"><img src="/assets/images/logotype.min.svg" alt=""></span> 
                 </a>
             </div>
         </div>
@@ -65,35 +63,22 @@
                         <span class="toggle-icon"><i class="icon-menu"></i></span>
                     </div>
                 </div>
-                <div class="header-left">
-                    <div class="input-group icons">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
-                        </div>
-                        <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
-                        <div class="drop-down   d-md-none">
-							<form action="#">
-								<input type="text" class="form-control" placeholder="Search">
-							</form>
-                        </div>
-                    </div>
-                </div>
                 <div class="header-right">
                     <ul class="clearfix">
                         
                         <li class="icons dropdown">
                             <div class="user-img c-pointer position-relative" data-toggle="dropdown">
-                                <span class="activity active"></span>
-                                <img src="/assets/images/user/1.png" height="40" width="40" alt="">
+                                <!-- <span class="activity active"></span> -->
+                                <img src="/assets/images/user/form-user.png" height="40" width="40" alt="">
                             </div>
-                            <div class="drop-down dropdown-profile   dropdown-menu">
+                            <div class="drop-down dropdown-profile dropdown-menu">
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
                                             <a href="#"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>                                      
                                         <hr class="my-2">
-                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="/logout"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -118,15 +103,18 @@
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-label">UI Components</li>
+                    <li class="nav-label">MENU</li>
+
+                    @if (Auth::user()->role == 'admin')
+
                     <li>
                         <a href="#" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Setting Diskon</span>
+                            <i class="icon-calculator menu-icon"></i><span class="nav-text">Setting Diskon</span>
                         </a>
                     </li>
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Data Master</span>
+                            <i class="icon-note menu-icon"></i><span class="nav-text">Data Master</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="#">Data User</a></li>
@@ -136,14 +124,18 @@
                     </li>
                     <li>
                         <a href="#" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Transaksi</span>
+                            <i class="icon-graph menu-icon"></i><span class="nav-text">Data Laporan</span>
                         </a>
                     </li>
+                    @endif
+
+                    @if (Auth::user()->role == 'kasir')
                     <li>
                         <a href="#" aria-expanded="false">
-                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Data Laporan</span>
+                            <i class="icon-basket-loaded menu-icon"></i><span class="nav-text">Data Transaksi</span>
                         </a>
                     </li>
+                    @endif
 
                 </ul>
             </div>
@@ -170,9 +162,16 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
+                    <!--               
+                    @if(Session::has('success'))
+                    <div class="alert alert-success alert-dismissible fade show">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        {{ Session::get('success') }}
+                    </div>
+                    @endif -->
+                    <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Data Table</h4>
+                            <h4 class="card-title">Data Table</h4>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered zero-configuration">
                                         <thead>

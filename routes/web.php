@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -15,4 +16,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [AuthController::class, 'index'])->name('/');
+Route::post('/cek_login', [AuthController::class, 'cek_login'])->name('cek_login');
+Route::get('/logout', [AuthController::class, 'logout']);
+
+Route::group(['middleware' => ['auth', 'checkRole:admin,kasir']], function(){
+    Route::get('/home', [HomeController::class, 'index']);
+});
+

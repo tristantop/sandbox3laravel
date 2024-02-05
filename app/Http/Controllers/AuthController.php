@@ -11,7 +11,11 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $data = array (
+            'title' => 'Login Page'
+        ); 
+
+        return view('index', $data);
     }
 
     public function cek_login(Request $request)

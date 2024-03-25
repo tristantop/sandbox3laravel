@@ -72,7 +72,7 @@
             <form method="POST" action="/jenisbarang/store">
                 @csrf
                 <div class="modal-body">
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Jenis Barang</label>
                         <input type="text" class="form-control" name="nama_jenis" placeholder="Jenis Barang ..." required>
                     </div>
@@ -98,7 +98,7 @@
             <form method="POST" action="/jenisbarang/update/{{$d->id}}">
                 @csrf
                 <div class="modal-body">
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Jenis Barang</label>
                         <input type="text" value="{{ $d->nama_jenis }}" class="form-control" name="nama_jenis" placeholder="Jenis Barang ..." required>
                     </div>
@@ -125,7 +125,7 @@
             <form method="GET" action="/jenisbarang/destroy/{{$c->id}}">
                 @csrf
                 <div class="modal-body">
-                    <div classs="form-group">
+                    <div class="form-group">
                         <h5>Apakah Anda Ingin Menghapus Data Ini?</h5>
                     </div>
                 </div>

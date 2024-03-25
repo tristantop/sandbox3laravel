@@ -76,19 +76,19 @@
             <form method="POST" action="/user/store">
                 @csrf
                 <div class="modal-body">
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Nama Lengkap</label>
                         <input type="text" class="form-control" name="name" placeholder="Name Lengkap ..." required>
                     </div>
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Email</label>
                         <input type="email" class="form-control" name="email" placeholder="Email ..." required>
                     </div>
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" name="password" placeholder="Password ..." required>
                     </div>
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Role</label>
                         <select class="form-control" name="role" required>
                             <option value="" hidden>-- Pilih Role --</option>
@@ -118,19 +118,19 @@
             <form method="POST" action="/user/update/{{$d->id}}">
                 @csrf
                 <div class="modal-body">
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Nama Lengkap</label>
                         <input type="text" value="{{ $d->name }}" class="form-control" name="name" placeholder="Name Lengkap ..." required>
                     </div>
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Email</label>
                         <input type="email" value="{{ $d->email }}" class="form-control" name="email" placeholder="Email ..." required>
                     </div>
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Password</label>
                         <input type="password" class="form-control" name="password" placeholder="Password ..." required>
                     </div>
-                    <div classs="form-group">
+                    <div class="form-group">
                         <label>Role</label>
                         <select class="form-control" name="role" required>
                             <option <?php if ($d['role']=="admin") echo "selected"?> value="admin">Admin</option>
@@ -160,7 +160,7 @@
             <form method="GET" action="/user/destroy/{{$d->id}}">
                 @csrf
                 <div class="modal-body">
-                    <div classs="form-group">
+                    <div class="form-group">
                         <h5>Apakah Anda Ingin Menghapus Data Ini?</h5>
                     </div>
                 </div>

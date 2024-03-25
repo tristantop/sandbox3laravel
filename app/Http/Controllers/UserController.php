@@ -49,7 +49,6 @@ class UserController extends Controller
         return redirect('/user') -> with('success', 'Data berhasil diubah!');
     }
 
-
     public function destroy($id)
     {
         $user = User::where('id', $id)->delete();

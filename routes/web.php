@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\JenisBarangController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DiskonController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +55,11 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,kasir']], function(){
 
     // Setting Profile
     Route::get('/profile', [UserController::class, 'profile']);
-    Route::post('/profile/update', [UserController::class, 'updateprofile']);    
+    Route::post('/profile/update', [UserController::class, 'updateprofile']);
+
+    // Data Transaksi
+    Route::get('/transaksi', [TransaksiController::class, 'index']);
+    Route::get('/transaksi/create', [TransaksiController::class, 'create']);
+
 });
 

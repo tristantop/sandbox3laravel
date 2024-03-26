@@ -46,7 +46,6 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         User::where('id', $id)
-        ->where('id', $id)
         ->update([
             'name' => $request->name,
             'email' => $request->email,
@@ -61,7 +60,6 @@ class UserController extends Controller
         $userid = Auth::user()->id;
 
         User::where('id', $userid)
-        ->where('id', $userid)
         ->update([
             'name' => $request->name,
             'email' => $request->email,

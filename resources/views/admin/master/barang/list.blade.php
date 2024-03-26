@@ -17,15 +17,13 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="d-flex align-item-center">
+                    <div class="card-body">
+                       <div class="d-flex align-item-center">
                             <h4 class="card-title">{{ $title }}</h4>
                             <button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#modalCreate">
                                 <i class="fa fa-plus"></i> Tambah Data
                             </button>
                         </div>
-                    </div>
-                    <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered zero-configuration">
                                 <thead>
@@ -104,7 +102,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-undo"></i> Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Changes</button>
                 </div>
             </form>
         </div>
@@ -148,7 +146,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-undo"></i> Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Changes</button>
                 </div>
             </form>
         </div>
@@ -174,7 +172,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-undo"></i> Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Changes</button>
                 </div>
             </form>
         </div>

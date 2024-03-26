@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Changes</button>
                     </div>
                 </form>
                 @endforeach
@@ -80,7 +80,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fa fa-undo"></i> Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save changes</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Save Changes</button>
                 </div>
             </form>
         </div>

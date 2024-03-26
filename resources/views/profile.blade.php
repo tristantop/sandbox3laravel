@@ -40,7 +40,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" value="{{ $d->password }}" class="form-control" name="password" placeholder="Password ..." required>
+                                    <input type="password" value="" class="form-control" name="password" placeholder="Password ..." required>
                                 </div>
                             </div>
                         </div>
